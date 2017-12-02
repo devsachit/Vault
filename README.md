@@ -16,12 +16,12 @@ Why use Vault ?
 2) Notes are encrypted and will be saved locally.
 3) You can add images in Notes from the Image Vault.
 
-*To Encryped your passwords.
+* To Encryped your passwords.
 1) You can save your multiple emails and passwords. 
 2) You can create many persons, many persons have many emails and each email has a current password and also the old passwords.
 3) Add,Edit,Copy and Delete function is so easy in Password Vault.
 
-*Other Features
+* Other Features
 1) While Vault is running in background, if any copied url contains image, it downloads, encrypts and saved automatically.
 2) You can create multiple Vaults, can move images across Vaults.
 3) Can Extract images from vaults and save normally in .jpg and .png format.
