@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{215E1865-D98B-476B-A6CF-93EAD8AA4691}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Vault</RootNamespace>
+    <AssemblyName>Vault</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Neocon Vault</ProductName>
+    <PublisherName>Neocon</PublisherName>
+    <SuiteName>Vault</SuiteName>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>3.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>if_vault_87929.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>ADA56A1ECB9720AF61DA6039375DE397EC47F5C6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Vault_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>D:\2. C#\C# Projects till 2016\Projects\NH Builder\NH Builder\bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.4.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\2. C#\C# Projects till 2016\Projects\NH Builder\NH Builder\bin\Debug\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>D:\2. C#\C# Projects till 2016\Projects\NH Builder\NH Builder\bin\Debug\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="FotoFly">
+      <HintPath>D:\2. C#\LAPTOP PROJECTS\DLL PROJECTS\size and location DLL MAIN NEW\size and location DLL MAIN NEW\bin\Debug\FotoFly.dll</HintPath>
+    </Reference>
+    <Reference Include="SD.DllCollection">
+      <HintPath>D:\2. C#\LAPTOP PROJECTS\DLL PROJECTS\size and location DLL MAIN NEW\size and location DLL MAIN NEW\bin\Debug\SD.DllCollection.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllImages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllImages.Designer.cs">
+      <DependentUpon>AllImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContextMenu.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="Copy Image\Clipboard.cs" />
+    <Compile Include="Copy Image\CopyController.cs" />
+    <Compile Include="Copy Image\ImageDownloader.cs" />
+    <Compile Include="CustomRootFolders.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="ExtractImages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtractImages.Designer.cs">
+      <DependentUpon>ExtractImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FullImage.cs" />
+    <Compile Include="GetStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetStringForm.Designer.cs">
+      <DependentUpon>GetStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalClass.cs" />
+    <Compile Include="ImageLoad.cs" />
+    <Compile Include="Index.cs" />
+    <Compile Include="LockDesign.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Metadata.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="NodeController.cs" />
+    <Compile Include="NodeControllerSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NodeControllerSettings.Designer.cs">
+      <DependentUpon>NodeControllerSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NodeInfo.cs" />
+    <Compile Include="NodeViewTitle.cs" />
+    <Compile Include="Note Vault\Notes.cs" />
+    <Compile Include="Note Vault\Writer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Note Vault\Writer.Designer.cs">
+      <DependentUpon>Writer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password Vault\Edit Old Pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password Vault\Edit Old Pass.Designer.cs">
+      <DependentUpon>Edit Old Pass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password Vault\EditPasswordEntity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password Vault\EditPasswordEntity.Designer.cs">
+      <DependentUpon>EditPasswordEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password Vault\Edit_Person_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password Vault\Edit_Person_Info.Designer.cs">
+      <DependentUpon>Edit_Person_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password Vault\Password Vault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password Vault\Password Vault.Designer.cs">
+      <DependentUpon>Password Vault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password Vault\Passwords.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ObjectProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectProperties.Designer.cs">
+      <DependentUpon>ObjectProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecectNodes.cs" />
+    <Compile Include="Tasks.cs" />
+    <EmbeddedResource Include="AllImages.resx">
+      <DependentUpon>AllImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtractImages.resx">
+      <DependentUpon>ExtractImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetStringForm.resx">
+      <DependentUpon>GetStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NodeControllerSettings.resx">
+      <DependentUpon>NodeControllerSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Note Vault\Writer.resx">
+      <DependentUpon>Writer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password Vault\Edit Old Pass.resx">
+      <DependentUpon>Edit Old Pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password Vault\Edit_Person_Info.resx">
+      <DependentUpon>Edit_Person_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password Vault\Password Vault.resx">
+      <DependentUpon>Password Vault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectProperties.resx">
+      <DependentUpon>ObjectProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Vault_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folderimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\titlebar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\love.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletedicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downloads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removesmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recentlyopened.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movedto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copiedfrom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\systemfolders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customfolders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add persn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copyclip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yahoo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linkedin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pininterest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skype.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lockscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globalmenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="if_vault_87929.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
